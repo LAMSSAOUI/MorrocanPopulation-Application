@@ -1,17 +1,13 @@
 import React from 'react'
-import { useState , useEffect } from 'react'
-import Select from './Select'
-import { useNavigate } from 'react-router-dom'
-import Detail from './Details'
-import Select1 from 'react-select'
-
+import { useState} from 'react'
+import Select from 'react-select'
 import { useQuery } from 'react-query'
 
 
 
 
 const fetchInfos = async () => {
-    const response = await fetch (`http://localhost:3000/cities/`) 
+    const response = await fetch ('http://localhost:3000/cities/') 
     return response.json()
 }
 
@@ -29,7 +25,7 @@ const Home = () => {
     <div className='grid grid-rows-2 h-screen'>
         <div className='bg-slate-100'>
             <h2 className='text-2xl font-extrabold max-w-lg mx-auto mt-6'>Choisissez une ville pour savoir combien de <span className='ml-32'>population contient</span> </h2>
-        <Select1    options={data}  getOptionLabel={(data) => data['city']} onChange={handlechange} getOptionValue={(data) => data.city} className='max-w-lg mx-auto mt-28 '/>
+        <Select    options={data}  getOptionLabel={(data) => data['city']} onChange={handlechange} getOptionValue={(data) => data.city} className='max-w-lg mx-auto mt-28 '/>
         </div>
     <div className='bg-slate-100'>
         {info && (
