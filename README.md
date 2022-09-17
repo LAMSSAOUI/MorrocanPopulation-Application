@@ -11,7 +11,7 @@ to see the project
 
    --if you watch a error of react simply go directly to package.json and ctrl+s 
 
-     3.and another for the json server and run 
+     3.and open another terminal  for the json server and run 
 
                json-server --watch data/ma.json 
 
