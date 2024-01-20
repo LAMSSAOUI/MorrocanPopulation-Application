@@ -12,7 +12,7 @@ to see the project :
                
   3. and open onother terminal to run the front  and run :
 
-              npm install  
+              npm install  --legacy-peer-deps
               npm start 
 
    --if you watch a error of react simply go directly to package.json and ctrl+s               
